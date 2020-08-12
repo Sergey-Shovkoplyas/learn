@@ -1,0 +1,77 @@
+//@import "abstracts/_mixins";
+//@import "abstracts/_variables";
+//
+//@import 'base/_fonts';
+//@import 'base/_base';
+//@import 'layout/_section-first';
+//@import 'layout/_section-second.sass';
+//
+//@import 'components/_button';
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  //outline: 1px solid blue;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 20px 10px;
+  grid-auto-rows: 100px;
+  grid-auto-columns: 100px;
+  //grid-auto-flow: column;
+  outline: 1px solid green;
+}
+
+.grid__element {
+  background-color: #00ff95;
+  height: 100%;
+  width: 100%;
+
+  &--subgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+  }
+
+  .subgri__element {
+    width: 100%;
+    height: 100%;
+    background-color: #6bb18e;
+  }
+}
+
+.header {
+  height: 50px;
+  background-color: red;
+}
+.footer {
+  background-color: black;
+  height: 1000px;
+}
+
+.main {
+  display: flex;
+}
+
+.aside {
+  position: relative;
+}
+
+.aside__block {
+  position: sticky;
+  top: 0;
+  background-color: green;
+  height: 100px;
+}
+
+.content {
+  background-color: yellow;
+  height: 1000px;
+}

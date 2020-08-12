@@ -11,7 +11,7 @@ const { src, dest, series, parallel, watch } = require('gulp'),
 		gcmq          = require('gulp-group-css-media-queries');
 
 function styles () {
-	return src('app/sass/**/*.sass')
+	return src('app/sass/**/*.scss')
 	.pipe(sourceMaps.init())
 	.pipe(sass().on('error', notify.onError()))
 	.pipe(rename({ suffix: '.min'}))
@@ -25,10 +25,10 @@ function serve () {
 		server: {
 			baseDir: "app"
 		}
-	}); 
+	});
 	watch('app/*.html').on('change', browserSync.reload);
 	watch('app/js/*.js').on('change', browserSync.reload);
-	watch('app/sass/**/*.sass', styles);
+	watch('app/sass/**/*.scss', styles);
 }
 
 function dist () {
@@ -52,4 +52,4 @@ exports.dist = series(dist, serve);
 exports.img = series(imageMin);
 
 
-		
+

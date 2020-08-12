@@ -1,11 +1,7 @@
+'use strict';
 window.onload = function () {
-	
-	console.log('js is working!!!'); 
+
+	let text = "some text";
+	console.log(text);
 
 }
-
-/* $( document ).ready(function() {
-
-	console.log( 'JQuery!!!' );
-
-}); */
